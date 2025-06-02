@@ -10,13 +10,13 @@ const interval = 1000 / targetFPS;  //milliseconds / frame
 
 function updateFPS() {
     const now = performance.now();
-    const delta = (now - lastCalledTime) / 1000;  // Fix: divide by 1000 outside parentheses
+    const delta = (now - lastCalledTime) / 1000;
     lastCalledTime = now;
     fps = 1 / delta;
     
     frameCount++;
     
-    // Display FPS every 60 frames to avoid flickering
+    // Display FPS every 60 frames
     if (frameCount % 60 === 0) {
         //console.log(`FPS: ${fps.toFixed(1)}`);
         //display on screen:
